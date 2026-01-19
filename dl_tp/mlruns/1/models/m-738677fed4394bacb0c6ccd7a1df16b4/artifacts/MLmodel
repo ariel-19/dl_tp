@@ -1,0 +1,20 @@
+artifact_path: /home/shey/tp_deep_learning/mlruns/0/models/m-738677fed4394bacb0c6ccd7a1df16b4/artifacts
+flavors:
+  keras:
+    data: data
+    keras_backend: tensorflow
+    keras_version: 3.12.0
+    save_exported_model: false
+  python_function:
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.keras
+    python_version: 3.10.12
+mlflow_version: 3.8.0
+model_id: m-738677fed4394bacb0c6ccd7a1df16b4
+model_size_bytes: 4907231
+model_uuid: m-738677fed4394bacb0c6ccd7a1df16b4
+prompts: null
+run_id: f91491c7679345f08e02deac846cc4df
+utc_time_created: '2025-12-21 17:27:58.335465'

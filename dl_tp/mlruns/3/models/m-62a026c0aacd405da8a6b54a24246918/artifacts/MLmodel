@@ -1,0 +1,22 @@
+artifact_path: /home/shey/tp_deep_learning/mlruns/2/models/m-62a026c0aacd405da8a6b54a24246918/artifacts
+flavors:
+  python_function:
+    data: data
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.tensorflow
+    python_version: 3.10.12
+  tensorflow:
+    code: null
+    data: data
+    keras_version: 2.20.0
+    model_type: keras
+    save_format: tf
+mlflow_version: 3.8.0
+model_id: m-62a026c0aacd405da8a6b54a24246918
+model_size_bytes: 4929547
+model_uuid: m-62a026c0aacd405da8a6b54a24246918
+prompts: null
+run_id: 68de2674e9c74a6f9e6631e4b6066c8a
+utc_time_created: '2025-12-22 12:47:36.271717'
