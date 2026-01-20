@@ -1,6 +1,6 @@
 # Deep Learning – Practical Works (TP 1 to TP 5)
 
-**Author:** Shey Cyrille Njeta  
+**Author:** Djongo Fokou Ariel Sharon
 
 This repository contains the **source code**, **Docker configurations**, and **reports** related to the Deep Learning practical works, covering **TP 1, 2, 3, 4, and 5**.
 
