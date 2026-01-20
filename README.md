@@ -1,86 +1,134 @@
-# Deep Learning Practical Works (TP 1, 2, 3, & 4)
+# Deep Learning – Practical Works (TP 1 to TP 5)
 
-**Author:** Shey Cyrille Njeta 
+**Author:** Shey Cyrille Njeta  
 
-
-This repository contains the source code, Docker configurations, and reports for the Deep Learning practical assignments (TP 1 to 4).
-
-## 🛠 Installation & Setup
-
-1. **Clone the repository:**
-   ```bash
-   git clone <your-repo-url>
-   cd <your-repo-folder>
-
-2. **Create and Activate a Virtual Environment:**
-   ```bash
-   python3 -m venv .venv
-   source .venv/bin/activate  # On Windows: .venv\Scripts\activate
-
-3. **Install Dependencies:**
-   ```bash
-   pip install -r requirements.txt
-
-## 📂 Execution Guide
-
-Think of this repository as a **progressive workshop**. We start by building a basic tool and putting it in a portable toolbox (Docker), then move to fine-tuning the engine, and finally build advanced visual sensors.
-
-### ✅ Practical 1: Foundations & Deployment
-*Focus: Base model training, API serving, and Docker containerization.*
-
-In this step, we create a basic "brain" for recognizing numbers and set up a "waiter" (the API) to take orders and return results. We then put everything in a **Docker container**, which is like a standardized shipping crate that ensures the code runs the same way on any computer.
-
-* **Script:** `train_model.py`
-    * **Description:** Trains the baseline MNIST model and saves it as `mnist_model.h5`.
-    * **Command:** `python3 train_model.py`
-* **Script:** `app.py`
-    * **Description:** Flask API that serves predictions using the trained model.
-    * **Command:** `python3 app.py` (Server runs on port 5000).
-
-**Docker Commands:**
-* **Build:** `docker build -t mnist-app .`
-* **Run:** `docker run -p 5000:5000 mnist-app`
+This repository contains the **source code**, **Docker configurations**, and **reports** related to the Deep Learning practical works, covering **TP 1, 2, 3, 4, and 5**.
 
 ---
 
-### ✅ Practical 2: Improving Neural Networks
-*Focus: Evolution of the training script with Regularization, MLOps, and Optimizers.*
+## 🛠 Installation and Setup
 
-This part is about **quality control**. We use "Regularization" (like Dropout) to act as a safety net, preventing the model from just memorizing the answers. We also use **MLflow**, which acts like a scientist's lab notebook to record every experiment automatically.
+### 1. Clone the repository
+```bash
+git clone <repository-url>
+cd <repository-folder>
+2. Create and activate a virtual environment
+python3 -m venv .venv
+source .venv/bin/activate   # On Windows: .venv\Scripts\activate
+
+3. Install dependencies
+pip install -r requirements.txt
+
+📂 Execution Guide
+
+This repository follows a structured and progressive learning path in Deep Learning.
+The goal is to start with fundamental models and gradually introduce advanced techniques, ranging from deployment to computer vision and medical data processing.
+
+✅ TP 1: Fundamentals and Deployment
+
+Focus: Basic model training, API serving, and Docker containerization.
+
+In this first practical work, a simple handwritten digit recognition model (MNIST) is trained, exposed through a REST API, and deployed using Docker to ensure portability and reproducibility.
+
+Scripts
+
+train_model.py
+Trains a baseline MNIST model and saves it as mnist_model.h5.
+
+python3 train_model.py
 
 
+app.py
+Flask API used to serve predictions from the trained model.
 
-* **Script:** `train_model.py`
-    * **Description:** Implements Data Splitting (Train/Val/Test), Bias/Variance diagnosis, Regularization (L2, Dropout, Batch Norm), and compares Optimizers using MLflow.
-    * **Command:** `python3 train_model.py`
+python3 app.py
+
+
+(Server runs on port 5000)
+
+Docker
+docker build -t mnist-app .
+docker run -p 5000:5000 mnist-app
+
+✅ TP 2: Improving Neural Networks
+
+Focus: Regularization, optimization, and experiment tracking.
+
+This practical introduces techniques to improve model generalization, including bias/variance analysis and regularization methods.
+MLflow is used to track and compare experiments efficiently.
+
+Script
+
+train_model.py
+
+Train / Validation / Test split
+
+Regularization (L2, Dropout, Batch Normalization)
+
+Optimizer comparison
+
+Experiment tracking with MLflow
+
+python3 train_model.py
+
+✅ TP 3: Computer Vision and CNNs
+
+Focus: Convolutional Neural Networks, ResNet, and Style Transfer.
+
+This practical focuses on image analysis using CNNs.
+It also explores neural style transfer, demonstrating how deep networks can separate image content from visual style.
+
+Scripts
+
+cnn_classification.py
+Trains a basic CNN and a ResNet model on the CIFAR-10 dataset.
+
+python3 cnn_classification.py
+
+
+style_transfer.py
+Implements neural style transfer using the VGG16 network.
+
+python3 style_transfer.py
+
+✅ TP 4: Segmentation and 3D Data
+
+Focus: Image segmentation and 3D convolutions.
+
+This practical addresses high-precision tasks, particularly relevant to medical imaging.
+A U-Net architecture is used for image segmentation, while 3D convolutions are applied to volumetric data.
+
+Scripts
+
+unet_segmentation.py
+Trains a U-Net model using Dice and IoU metrics.
+
+python3 unet_segmentation.py
+
+
+conv3d_demo.py
+Implements a Conv3D block and logs the architecture using MLflow.
+
+python3 conv3d_demo.py
+
+✅ TP 5: Advanced Approaches and Integration
+
+Focus: Consolidation and advanced applications.
+
+TP 5 aims to consolidate all concepts introduced in previous practical works.
+It emphasizes the integration of advanced techniques, adaptation to realistic use cases, and comprehensive evaluation of the developed models, particularly in a medical context.
+
+📌 Note
+
+Each practical work is designed to be independent yet complementary, enabling a gradual skill progression in Deep Learning—from foundational concepts to advanced real-world applications.
+
 
 ---
 
-### ✅ Practical 3: CNNs & Computer Vision
-*Focus: CNNs, ResNets, and Style Transfer.*
+If you want, I can also:
+- 📘 make a **short academic version**
+- 🧪 add a **Results / Experiments** section
+- 🐳 improve **Docker + MLflow documentation**
+- 🌍 adapt it for **GitHub classroom or course submission**
 
-Now we give the machine "eyes." We use **CNNs**, which look at small patches of an image at a time (like a magnifying glass) to find patterns. We also explore **Style Transfer**, which is like teaching the computer to "paint" a photo in the style of a famous artist.
-
-* **Script:** `cnn_classification.py`
-    * **Description:** Trains a Basic CNN and implements a ResNet on CIFAR-10.
-    * **Command:** `python3 cnn_classification.py`
-* **Script:** `style_transfer.py`
-    * **Description:** Uses VGG16 to extract Content and Style features from local images.
-    * **Command:** `python3 style_transfer.py`
-
----
-
-### ✅ Practical 4: Segmentation & 3D Data
-*Focus: U-Net, Segmentation Metrics, and 3D Convolutions.*
-
-Finally, we move to **high-precision work**. Instead of just identifying an object, we use a **U-Net** to outline it pixel by pixel (Segmentation)—similar to how a doctor carefully traces a tumor on a scan. We also look at 3D data, which is like looking at a whole stack of photos (a volume) instead of just one.
-
-
-
-* **Script:** `unet_segmentation.py`
-    * **Description:** Trains a U-Net on synthetic medical data using Dice and IoU metrics.
-    * **Command:** `python3 unet_segmentation.py`
-* **Script:** `conv3d_demo.py`
-    * **Description:** Implements a 3D Convolutional block (Conv3D) and logs architecture to MLflow.
-    * **Command:** `python3 conv3d_demo.py`
-
+Just tell me 😊
