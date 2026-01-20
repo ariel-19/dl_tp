@@ -123,12 +123,4 @@ It emphasizes the integration of advanced techniques, adaptation to realistic us
 Each practical work is designed to be independent yet complementary, enabling a gradual skill progression in Deep Learning—from foundational concepts to advanced real-world applications.
 
 
----
 
-If you want, I can also:
-- 📘 make a **short academic version**
-- 🧪 add a **Results / Experiments** section
-- 🐳 improve **Docker + MLflow documentation**
-- 🌍 adapt it for **GitHub classroom or course submission**
-
-Just tell me 😊
